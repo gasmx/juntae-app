@@ -1,0 +1,30 @@
+<!--
+(*) assigned classes
+styles file register.scss
+-->
+<ion-content padding>
+    <!-- *class logo / logo of the company -->
+    <div class="logo">
+        <img src="assets/img/logo.png" alt="Company">
+    </div>
+    <ion-list inset>
+        <form>
+            <ion-item>
+                <ion-input type="text" placeholder="Email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Username"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="password" placeholder="Password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="password" placeholder="Repeat password"></ion-input>
+            </ion-item>
+            <button ion-button block (click)="dismiss()">REGISTER</button>
+            <p text-center>
+                <a href="#" (click)="openLogin()" color="primary">Login</a>
+            </p>
+        </form>
+    </ion-list>
+</ion-content>

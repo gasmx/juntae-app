@@ -1,0 +1,67 @@
+<!-- 
+(*) assigned classes
+file profile.scss
+-->
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Profile</ion-title>
+        <ion-buttons end>
+            <button ion-button>
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <!-- *class avatar-profile / content avatar -->
+    <div class="avatar-profile">
+        <ion-item>
+            <ion-avatar>
+                <img src="assets/img/8.jpg">
+                <ion-fab right middle>
+                    <button ion-fab mini color="danger"><ion-icon name="ios-camera-outline"></ion-icon></button>
+                </ion-fab>
+            </ion-avatar>
+            <h2>Amy Wood</h2>
+            <p>I'm time study.</p>
+        </ion-item>
+    </div>
+    <!-- *class profile-actions / content profile actions -->
+    <div class="profile-actions">
+        <ion-row no-padding>
+            <ion-col text-center>
+                <button ion-button clear (click)="openFollowers($event)">
+                    <h2>13520</h2>
+                    <small>FOLLOWER</small>
+                </button>
+            </ion-col>
+            <ion-col text-center>
+                <button ion-button clear>
+                    <h2>2450</h2>
+                    <small>FOLLOWING</small>
+                </button>
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Username</ion-label>
+            <ion-input type="text" value="Amy Wood"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Password</ion-label>
+            <ion-input type="password" value="12345"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="email" value="amy@wood.com"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>State</ion-label>
+            <ion-input type="text" value="I'm time study'"></ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>

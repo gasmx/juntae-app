@@ -1,0 +1,24 @@
+<!--
+(*) assigned classes
+styles file login.scss
+-->
+<ion-content padding>
+    <!-- *class logo / logo of the company -->
+    <div class="logo">
+        <img src="assets/img/logo.png" alt="Company">
+    </div>
+    <ion-list inset>
+        <form>
+            <ion-item>
+                <ion-input type="text" placeholder="Username"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="password" placeholder="Password"></ion-input>
+            </ion-item>
+            <button ion-button block (click)="dismiss()">LOGIN</button>
+            <p text-center>
+                <a href="#" (click)="openRegister()" color="primary">Create Acount</a>
+            </p>
+        </form>
+    </ion-list>
+</ion-content>

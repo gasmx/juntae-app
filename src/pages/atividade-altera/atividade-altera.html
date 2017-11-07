@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Alterar atividade</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-content>
+            <form #form="ngForm" novalidate>
+                <ion-list>
+                    <ion-item>
+                        <ion-label stacked>Nome da atividade</ion-label>
+                        <ion-input ngModel required type="text" name="name" [(ngModel)]="activity.name"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label stacked>Descrição</ion-label>
+                        <ion-textarea ngModel name="description" [(ngModel)]="activity.description"></ion-textarea>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label stacked>Data de entrega</ion-label>
+                        <ion-datetime name="due_date" displayFormat="MMM DD, h:mm A" required doneText="OK" [(ngModel)]="dueDate"></ion-datetime>
+                    </ion-item>
+                </ion-list>
+            </form>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-fab bottom right>
+        <button ion-fab (click)="saveActivity(form.value)">
+            <ion-icon name="md-checkmark"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-content>

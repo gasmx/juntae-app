@@ -1,0 +1,8 @@
+.ios, .md {
+	page-followers {
+		ion-list-header {
+			background-color: darken( map-get($colors, light), 5%) !important;
+			color: lighten(map-get($colors, dark), 40%) !important;
+		}
+	}
+}

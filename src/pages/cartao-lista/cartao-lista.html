@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Cartões</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let card of cards">
+
+      <ion-card-content>
+        <ion-item>
+          <h2 color="dark">{{ card.name }}</h2>
+          <button [ngStyle]="{'color': card.activity_card_status_color, 'border-color': card.activity_card_status_color}" ion-button outline item-end>{{ card.activity_card_status_name }}</button>
+        </ion-item>
+      </ion-card-content>
+
+      <ion-row>
+          <ion-col>
+            <button ion-button icon-left clear small>
+                <ion-icon name="eye"></ion-icon>
+                <div>Visualizar</div>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+</ion-content>

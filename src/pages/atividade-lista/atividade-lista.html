@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Atividades</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor="let item of resourceList">                
+        <ion-card-header (click)="cardList(item.cards)">
+            <h2><b>{{ item.name }}</b></h2>
+            <p>para <i>{{ item.due_date | date:'dd/MM/yyyy':'-0300' }}</i> às <i>{{ item.due_date | date:'HH:mm':'-0300' }}</i></p>
+        </ion-card-header>
+        
+        <ion-card-content (click)="cardList(item.cards)" *ngIf="item.description">
+            <p>{{ item.description }}</p>
+        </ion-card-content>
+        
+        <ion-row *ngIf="user.id == item.owner_id">
+            <ion-col>
+                <button color="positive-dark" (click)="edit(item)" ion-button icon-left clear small>
+                    <ion-icon name="md-create"></ion-icon>
+                    <div>Editar</div>
+                </button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <button (click)="activityDetail(item)" ion-button icon-left clear small>
+                    <ion-icon name="eye"></ion-icon>
+                    <div>Visualizar</div>
+                </button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="people"></ion-icon>
+                    <div>Adicionar membros</div>
+                </button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>{{ item.comments.length }} comentário(s)</div>
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+
+    <ion-fab bottom right>
+        <button ion-fab (click)="new()">
+            <ion-icon name="md-add"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-content>

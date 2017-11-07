@@ -1,17 +1,37 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header>
+        <ion-toolbar>
+            <!-- <ion-buttons start>
+                <button ion-button icon-only>
+                <ion-icon name="ios-create-outline"></ion-icon>
+            </button>
+            </ion-buttons> -->
+        </ion-toolbar>
+    </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
+    <ion-content>
+        <ion-list>
+            <ion-item>
+                <!-- <ion-avatar>
+                    <img src="assets/img/8.jpg">
+                </ion-avatar> -->
+                <h2>Gabriel Angelus</h2>
+                <p>gangeluscf@gmail.com</p>
+            </ion-item>
+            <button menuClose ion-item *ngFor="let p of pages" [class.active-menu]="menuActive(p)" (click)="openPage(p)">
+                <ion-icon name="{{p.icon}}" item-left></ion-icon>
+                {{p.title}}
+            </button>
+            <button menuClose ion-item (click)="openLogin()">
+                <ion-icon name="ios-lock-outline" item-left></ion-icon>
+                Login
+            </button>
+            <button menuClose ion-item (click)="openLogout()">
+                <ion-icon name="ios-arrow-round-forward-outline" item-left></ion-icon>
+                Logout
+            </button>
+        </ion-list>
+    </ion-content>
 
 </ion-menu>
 

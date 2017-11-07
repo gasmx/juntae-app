@@ -1,0 +1,169 @@
+<!-- 
+(*) assigned classes
+file newfeeds.scss
+-->
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>News Feed</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="alertPopup()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img/4.jpg">
+            </ion-avatar>
+            <h2>Dana Cobain</h2>
+            <p>
+                <ion-icon name="ios-time-outline"></ion-icon> 1 days ago
+            </p>
+        </ion-item>
+        <!-- *class feed / content image feed -->
+        <div class="feed">
+            <img src="assets/img/feed/7.jpg">
+            <!-- *class feed-actions / content feed actions -->
+            <!-- *class top / position show feed actions -->
+            <div class="feed-actions top">
+                <ion-icon name="heart"></ion-icon> 10
+                <ion-icon name="ios-chatbubbles"></ion-icon> 5
+            </div>
+        </div>
+        <!-- *class bg-dark / background color actions -->
+        <ion-row class="bg-dark">
+            <ion-col text-center>
+                <button ion-button clear small icon-left>
+                    <ion-icon name='heart'></ion-icon>
+                    Like
+                </button>
+            </ion-col>
+            <ion-col text-center>
+                <button ion-button clear small icon-left>
+          <ion-icon name='text'></ion-icon>
+          Comment
+        </button>
+            </ion-col>
+            <ion-col text-center>
+                <button ion-button clear small icon-left>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <!-- *class card-grid / content grid images -->
+    <ion-grid class="card-grid">
+        <ion-row>
+            <ion-col width-50>
+                <ion-card>
+                    <!-- *class feed / content image feed -->
+                    <div class="feed">
+                        <img src="assets/img/feed/8.jpg">
+                        <!-- *class feed-actions / content feed actions -->
+                        <!-- *class bottom / position show feed actions -->
+                        <div class="feed-actions bottom">
+                            <ion-icon name="heart"></ion-icon> 350
+                        </div>
+                    </div>
+                </ion-card>
+            </ion-col>
+            <ion-col width-50>
+                <ion-card>
+                    <!-- *class feed / content image feed -->
+                    <div class="feed">
+                        <img src="assets/img/feed/11.jpg">
+                        <!-- *class feed-actions / content feed actions -->
+                        <!-- *class bottom / position show feed actions -->
+                        <div class="feed-actions bottom">
+                            <ion-icon name="heart"></ion-icon> 210
+                        </div>
+                    </div>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-card>
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img/1.jpg">
+            </ion-avatar>
+            <h2>Venkman Romero</h2>
+            <p>
+                <ion-icon name="ios-time-outline"></ion-icon> 2 days ago
+            </p>
+            <ion-icon color="primary" name="heart" item-right></ion-icon>
+        </ion-item>
+        <!-- *class feed / content image feed -->
+        <div class="feed">
+            <img src="assets/img/feed/6.jpg">
+            <!-- *class feed-actions / content feed actions -->
+            <!-- *class bottom / position show feed actions -->
+            <div class="feed-actions bottom">
+                <ion-icon name="heart"></ion-icon> 150
+            </div>
+        </div>
+        <ion-card-content>
+            <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+        </ion-card-content>
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>75 Comments</div>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card>
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img/5.jpg">
+            </ion-avatar>
+            <h2>Rebecca</h2>
+            <p>
+                <ion-row>
+                    <ion-col>
+                        <ion-icon name="ios-time-outline"></ion-icon> 2 days ago
+                    </ion-col>
+                    <ion-col text-right>
+                        <ion-icon name="heart-outline"></ion-icon> 10
+                        <ion-icon name="ios-chatbubbles-outline"></ion-icon> 5
+                    </ion-col>
+                </ion-row>
+            </p>
+        </ion-item>
+        <ion-card-content>
+            <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+        </ion-card-content>
+        <img src="assets/img/feed/16.jpg">
+        <!-- *class bg-primary / background color actions -->
+        <ion-row class="bg-primary">
+            <ion-col text-center>
+                <button ion-button clear small icon-left>
+          <ion-icon name='star'></ion-icon>
+          Like
+        </button>
+            </ion-col>
+            <ion-col text-center>
+                <button ion-button clear small icon-left>
+          <ion-icon name='text'></ion-icon>
+          Comment
+        </button>
+            </ion-col>
+            <ion-col text-center>
+                <button ion-button clear small icon-left>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>

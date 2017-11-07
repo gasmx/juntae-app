@@ -1,0 +1,43 @@
+.ios, .md {
+	page-listusers {
+		ion-searchbar {
+			background-color: map-get($colors, light);
+			min-height: 60px;
+			border-bottom: 2px solid $line-color;
+			.searchbar-search-icon {
+				top: 14px;
+				left: 12px;
+			}
+			.searchbar-input {
+				border: 1px solid $line-color;
+				border-radius: 50px;
+				box-shadow: none;
+				font-size: 1.4rem;
+				height: 4rem;
+				padding: 0 30px;
+			}
+		}
+	}
+}
+
+.md {
+	page-listusers {
+		ion-searchbar {
+			.searchbar-search-icon {
+				background-size: 16px;
+				top: 12px !important;
+			}
+		}
+	}
+}
+
+.ios {
+	page-listusers {
+		.item-inner {
+			>ion-icon {
+			    min-height: 4.8rem;
+    			font-size: 4.8rem;
+			}
+		}
+	}
+}
